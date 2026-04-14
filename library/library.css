@@ -1,0 +1,57 @@
+body {
+    font-family: 'Amiri', serif;
+    background-color: #fdfaf5 !important;
+}
+
+.fw-black { font-weight: 900; }
+
+/* ألوان مخصصة */
+.btn-gold {
+    background-color: #cab175;
+    color: #4E342E;
+    border: 1px solid #cab175;
+    font-weight: bold;
+}
+.btn-gold:hover {
+    background-color: #4E342E;
+    color: #cab175;
+    border-color: #cab175;
+}
+.btn-outline-gold {
+    color: #cab175;
+    border: 1px solid #cab175;
+}
+.bg-gold-soft { background-color: #cab175; opacity: 0.9; }
+
+/* تأثيرات البطاقة */
+.custom-card {
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    border-radius: 15px !important;
+    cursor: pointer;
+}
+
+.transition-img { transition: transform 0.5s ease; }
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    background-color: #4E342E !important;
+}
+
+.custom-card:hover .transition-img { transform: scale(1.1); }
+
+/* تغيير ألوان النصوص داخل البطاقة عند الهوفر */
+.custom-card:hover h4, 
+.custom-card:hover p, 
+.custom-card:hover .card-text {
+    color: #ffffff !important;
+}
+
+/* حالة الصفحة الحالية في الناف بار */
+.active-link {
+    color: #cab175 !important;
+    border-bottom: 2px solid #cab175;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #cab175 !important;
+}

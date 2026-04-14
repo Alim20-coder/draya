@@ -72,3 +72,25 @@ document.addEventListener("DOMContentLoaded", function() {
             // بدء التشغيل
             scrollTestimonials();
         });
+        // nav scrool logic//////////
+        const nav = document.querySelector('.custom-nav');
+nav.style.position = 'fixed';
+nav.style.width = '80%';
+nav.style.top = '0';
+nav.style.zIndex = '1000';
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.querySelector('.custom-nav');
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+            // إضافة خلفية داكنة وظل عند النزول
+            nav.style.backgroundColor = "rgba(10, 10, 10, 0.95)"; 
+            nav.style.backdropFilter = "blur(10px)";
+            nav.style.transition = "0.4s all ease";
+        } else {
+            // العودة للحالة الشفافة عند الصعود للأعلى
+            nav.style.backgroundColor = "transparent";
+            nav.style.backdropFilter = "none";
+        }
+    });
+});
