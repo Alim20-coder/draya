@@ -331,6 +331,16 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--gold);
     font-weight: bold;
 }
+@media (max-width: 767.98px) {
+    .list-image {
+        height: 250px; /* تحديد ارتفاع للصورة لأنها لا تظهر تلقائياً على الموبايل */
+        display: block !important;
+    }
+    
+    .list-container {
+        min-height: auto; /* لضمان عدم وجود فراغات زائدة */
+    }
+}
 
 /* /////////////////////////////////// */
 
