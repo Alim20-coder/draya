@@ -199,47 +199,63 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* About end ****************************************/
-
 .services-section {
-    background-color:  #aa8861; /* بني أبنوس داكن جداً */
-    border-top: 1px solid rgba(201, 164, 76, 0.2);
+    background-color: #aa8861;
 }
 
 .service-card {
     background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 4px;
-    border-bottom: 3px solid var(--gold); 
-    transition: all 0.4s ease;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    border-radius: 12px; /* زوايا أنعم */
+    border-bottom: 4px solid var(--gold); 
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* عشان الصورة متطلعش برا الزوايا */
+    text-align: center;
+}
+
+/* حاوية الكوفر */
+.service-cover {
+    width: 100%;
+    height: 200px; /* ارتفاع الكوفر */
+    overflow: hidden;
+    position: relative;
+}
+
+.service-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* تجعل الصورة تمتد كغلاف بدون تمطيط */
+    transition: transform 0.5s ease;
+}
+
+/* محتوى النص تحت الكوفر */
+.service-content {
+    padding: 25px 20px;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    background: #4E342E; /* بني خشبي دافئ للهوفر */
+    transform: translateY(-12px);
+    background: #4E342E; 
+}
+
+.service-card:hover .service-cover img {
+    transform: scale(1.1); /* زووم بسيط للصورة عند الهوفر */
 }
 
 .service-card h4 {
-    color: var(--navy); /* بني داكن بدلاً من الكحلي */
-    margin-bottom: 20px;
-    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 1.25rem;
     transition: 0.4s;
 }
 
 .service-card p {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    transition: 0.4s;
-}
-
-.service-icon {
-    font-size: 2.5rem;
-    color: var(--gold);
-    margin-bottom: 20px;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
     transition: 0.4s;
 }
 
@@ -248,15 +264,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff !important;
 }
 
-.service-card:hover .service-icon {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.special-card {
-    text-align: right;
-    border-right: 5px solid var(--gold);
-    border-bottom: none;
-}
 
 /* Services End ************************************ */
 
