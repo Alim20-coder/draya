@@ -624,9 +624,33 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
 }
 
-/* سطر الحقوق */
 .footer-bottom {
     background-color: rgba(0, 0, 0, 0.2);
     font-size: 0.85rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
+/* Team Work Section  */
+
+.team-card {
+    transition: transform 0.3s ease;
+    height: 400px; /* تحكم في طول الكارد */
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-box {
+    background: rgba(34, 21, 16, 0.85); 
+    border-top: 2px solid var(--gold);
+}
+
+.team-card:hover .info-box {
+    background: rgba(61, 43, 31, 0.95); /* لون الـ Wood Dark عند الهوفر */
+}
+
